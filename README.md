@@ -1,4 +1,4 @@
-## Red 2 Shred - Firefox Extension
+## Red 2 Shred - Firefox extension
 
 ### Erase your browser data—for those who like to cancel their footprints, but with style!
 
