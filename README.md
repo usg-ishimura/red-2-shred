@@ -22,12 +22,3 @@ The following command will create a zip file of Firefox extensions.
 $ chmod +x build.sh
 $ ./build.sh
 ```
-
-### Logo
-
-- [Heavy metal icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/heavy-metal)
-
-
-### License
-
-The code in this repository is released under the MIT License.
