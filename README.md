@@ -12,6 +12,8 @@ Does it feel like pure nonsense? Who cares! Don’t let anyone tell you what to 
 
 - [Get it on addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/red-2-shred/)
 
+**⚠️ Warning!** This extension will cancel all your browser data, logging you out of all your accounts, deleting saved passwords, clearing history, and resetting plugins. **DO NOT** use this extension if you don't know what you are doing. 
+
 ### How to build
 
 The following command will create a zip file of Firefox extensions.
