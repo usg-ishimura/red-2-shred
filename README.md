@@ -16,6 +16,10 @@ Does it feel like pure nonsense? Who cares! Don’t let anyone tell you what to 
 
 ### How to build
 
+This extension is built using web-ext.
+
+- [Getting started with web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
+
 The following command will create a zip file of Firefox extensions.
 
 ```sh
