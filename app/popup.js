@@ -3,55 +3,49 @@ document.getElementById('annullaBtn').addEventListener('click', function() {
     window.close();
 });
 
-// Imposta l'intervallo di tempo per cui eliminare i dati (tutti i dati)
-const removalOptions = {
-    "since": 0 // Imposta "0" per rimuovere tutti i dati (da sempre)
-};
+async function deepClearAllData() {
+    
+    const removalOptions = {
+            "since": 0 // Set "0" to remove all data (from the beginning)
+    };
+    
+    try {   
+        //https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
+    
+        let dataTypes = {
+            cache: true,
+            cookies: true,
+            downloads: true,
+            formData: true,
+            history: true,
+            indexedDB: true,
+            localStorage: true,
+            passwords: true,
+            pluginData: true,
+            serviceWorkers: true
+        };
 
-async function clearBrowsingData() {
-    try {
-        await browser.browsingData.removeCache(removalOptions);
-        console.log("Cache eliminata.");
+        let removing = browser.browsingData.remove(removalOptions, dataTypes);
+        
+        await removing;
 
-        await browser.browsingData.removeCookies(removalOptions);
-        console.log("Cookie eliminati.");
-
-        await browser.browsingData.removeDownloads(removalOptions);
-        console.log("Download eliminati.");
-
-        await browser.browsingData.removeFormData(removalOptions);
-        console.log("Dati dei moduli eliminati.");
-
-        await browser.browsingData.removeHistory(removalOptions);
-        console.log("Cronologia eliminata.");
-
-        await browser.browsingData.removeLocalStorage(removalOptions);
-        console.log("LocalStorage eliminato.");
-
-        await browser.browsingData.removePasswords(removalOptions);
-        console.log("Password eliminate.");
-
-        await browser.browsingData.removePluginData(removalOptions);
-        console.log("Dati dei plugin eliminati.");
-
-        console.log("Tutti i dati sono stati eliminati!");
+        console.log("All browsing data has been deleted!");
         
         window.close();
-
+        
     } catch (error) {
-        console.error("Errore durante l'eliminazione dei dati:", error);
+        console.error("Error while deleting data:", error);
     }
 }
 
-
 document.getElementById('eliminaBtn').addEventListener('click', function() {
   
-      document.getElementById("popupTitle").innerHTML = "Shredding...";
+      document.getElementById("popupTitle").innerHTML = "Shredding data...";
       
-      document.getElementById("modalBody").innerHTML = '<div style="padding-top:100.000%;position:relative;"><iframe src="https://gifer.com/embed/hMF" width="100%" height="100%" style="position:absolute;top:0;left:0;" frameBorder="0" allowFullScreen></iframe></div><p><a href="https://gifer.com">a través de GIFER</a></p>';
+      document.getElementById("modalBody").innerHTML = '<div style="padding-top:100.000%;position:relative;"><iframe src="https://gifer.com/embed/hMF" width="100%" height="100%" style="position:absolute;top:0;left:0;" frameBorder="0" allowFullScreen></iframe></div><p><a href="https://gifer.com">via GIFER</a></p>';
 
-      // Aspetta 9 secondi prima di chiamare clearBrowsingData()
+      // Wait 9 seconds before calling deepClearAllData()
       setTimeout(() => {
-         clearBrowsingData();
+         deepClearAllData()
       }, 9000);
 });
