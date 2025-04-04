@@ -5,7 +5,6 @@
 Feeling slightly OCD and erasing all your browser data gives you an odd sense of control? 
 
 Then this extension is perfect for you! 
-
 Now you can shred your browser data with style—because why settle for boring resets?
 
 Does it feel like pure nonsense? Who cares! Don’t let anyone tell you what to enjoy.
