@@ -1,7 +1,7 @@
 {
   "name": "Red 2 Shred",
   "description": "Feeling slightly OCD and erasing all your browser data gives you an odd sense of control? Then this extension is perfect for you! Now you can shred browser data with style.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "manifest_version": 2,
   
   "icons": {
